@@ -5,3 +5,18 @@
  лучше обойтись исключительно массивами.
 */
 
+string[] firstArray = new string[6] { "1", "23", "No", "Hello", ":-)", "Yes" };
+string[] secondArray = new string[firstArray.Length];
+
+void FinalArray(string[] firstArray, string[] secondArray)
+{
+    int count = 0;
+    for (int i = 0; i < firstArray.Length; i++)
+    {
+        if (firstArray[i].Length <= 3)
+        {
+            secondArray[count] = firstArray[i];
+            count++;
+        }
+    }
+}
